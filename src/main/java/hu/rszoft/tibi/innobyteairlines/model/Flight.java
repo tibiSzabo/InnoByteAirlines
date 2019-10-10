@@ -14,19 +14,23 @@ public class Flight {
         this.timeInterval = timeInterval;
     }
 
+    public City getFrom() {
+        return from;
+    }
+
+    public City getDestination() {
+        return destination;
+    }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
     public int getDistance() {
         return distance;
     }
 
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
-
     public TimeInterval getTimeInterval() {
         return timeInterval;
-    }
-
-    public void setTimeInterval(TimeInterval timeInterval) {
-        this.timeInterval = timeInterval;
     }
 }
