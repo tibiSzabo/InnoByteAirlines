@@ -1,28 +1,46 @@
 package hu.rszoft.tibi.innobyteairlines.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Airline {
-    private String id;
-    private String name;
-    private List flights = new ArrayList<Flight>();
 
-    public Airline(String id, String name, List flights) {
+    @JsonProperty("id")
+    private String id;
+
+    @JsonProperty("name")
+    private String name;
+
+    @JsonCreator
+    public Airline(@JsonProperty("id") String id,
+                   @JsonProperty("name") String name) {
         this.id = id;
         this.name = name;
-        this.flights = flights;
     }
 
     public String getId() {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
 
-    public List getFlights() {
-        return flights;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Airline{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

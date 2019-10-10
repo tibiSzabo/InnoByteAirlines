@@ -9,6 +9,10 @@ import java.util.List;
 public class AirlineDaoImpl implements BaseDao<Airline> {
     private List<Airline> airlines;
 
+    public AirlineDaoImpl() {
+
+    }
+
     @Override
     public Airline getById(int id) {
         return this.airlines.stream()

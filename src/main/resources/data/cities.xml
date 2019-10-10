@@ -2,12 +2,14 @@
 <database>
 
 	<cities>
-		<city id="1">
+		<city>
+			<id>1</id>
 			<name>City One</name>
 			<population>50000</population>
 		</city>
 
-		<city id="2">
+		<city>
+			<id>2</id>
 			<name>City Two</name>
 			<population>15000</population>
 		</city>
