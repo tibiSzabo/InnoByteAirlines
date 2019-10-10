@@ -1,4 +1,4 @@
-package com.innobyteairlines.innobyteairlines;
+package hu.rszoft.tibi.innobyteairlines;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

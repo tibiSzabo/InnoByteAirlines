@@ -1,4 +1,4 @@
-package com.innobyteairlines.innobyteairlines;
+package hu.rszoft.tibi.innobyteairlines;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
