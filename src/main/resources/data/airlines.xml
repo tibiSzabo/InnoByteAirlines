@@ -7,4 +7,22 @@
 		</airline>
 	</airlines>
 
+	<airlines>
+		<airline id="2">
+			<name>Airline Two</name>
+		</airline>
+	</airlines>
+
+	<airlines>
+		<airline id="3">
+			<name>Airline Three</name>
+		</airline>
+	</airlines>
+
+	<airlines>
+		<airline id="4">
+			<name>Airline Four</name>
+		</airline>
+	</airlines>
+
 </database>

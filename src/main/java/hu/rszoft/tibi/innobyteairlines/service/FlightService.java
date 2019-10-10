@@ -1,6 +1,7 @@
 package hu.rszoft.tibi.innobyteairlines.service;
 
 import hu.rszoft.tibi.innobyteairlines.dao.dao_impl.AirlineDaoImpl;
+import hu.rszoft.tibi.innobyteairlines.dao.dao_impl.CityDaoImpl;
 import hu.rszoft.tibi.innobyteairlines.dao.dao_impl.FlightDaoImpl;
 import hu.rszoft.tibi.innobyteairlines.model.Flight;
 
@@ -11,6 +12,7 @@ public class FlightService {
 
     private AirlineDaoImpl airlineDao = new AirlineDaoImpl();
     private FlightDaoImpl flightDao = new FlightDaoImpl();
+    private CityDaoImpl cityDao = new CityDaoImpl();
 
     public List<Flight> getAllFlights() {
         return this.flightDao.getAll();
@@ -36,5 +38,7 @@ public class FlightService {
                     .collect(Collectors.toList());
         }
     }
+
+
 
 }
