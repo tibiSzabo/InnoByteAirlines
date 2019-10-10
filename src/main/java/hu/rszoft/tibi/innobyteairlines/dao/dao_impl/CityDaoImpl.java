@@ -4,7 +4,6 @@ import hu.rszoft.tibi.innobyteairlines.dao.BaseDao;
 import hu.rszoft.tibi.innobyteairlines.model.Cities;
 import hu.rszoft.tibi.innobyteairlines.model.City;
 import hu.rszoft.tibi.innobyteairlines.service.XmlParser;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

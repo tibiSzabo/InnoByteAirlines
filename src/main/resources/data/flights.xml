@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <database>
 
+	<!--First airline smallest to biggest city: one go-->
 	<flights>
 		<flight id="1">
 			<airline_id>1</airline_id>
@@ -12,9 +13,10 @@
 		</flight>
 	</flights>
 
+	<!--Second airline smallest to biggest city: doesnt go-->
 	<flights>
 		<flight id="2">
-			<airline_id>1</airline_id>
+			<airline_id>2</airline_id>
 			<flight_number>FLIGHTNO02</flight_number>
 			<from_city_id>1</from_city_id>
 			<destination_city_id>2</destination_city_id>
@@ -23,11 +25,12 @@
 		</flight>
 	</flights>
 
+	<!--Third airline smallest to biggest city: with change-->
 	<flights>
 		<flight id="3">
-			<airline_id>1</airline_id>
+			<airline_id>3</airline_id>
 			<flight_number>FLIGHTNO03</flight_number>
-			<from_city_id>1</from_city_id>
+			<from_city_id>4</from_city_id>
 			<destination_city_id>2</destination_city_id>
 			<distance>1500</distance>
 			<duration>180</duration>
@@ -36,10 +39,10 @@
 
 	<flights>
 		<flight id="4">
-			<airline_id>1</airline_id>
+			<airline_id>3</airline_id>
 			<flight_number>FLIGHTNO04</flight_number>
-			<from_city_id>1</from_city_id>
-			<destination_city_id>2</destination_city_id>
+			<from_city_id>2</from_city_id>
+			<destination_city_id>3</destination_city_id>
 			<distance>1500</distance>
 			<duration>300</duration>
 		</flight>
