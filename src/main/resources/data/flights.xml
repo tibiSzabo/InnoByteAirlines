@@ -5,11 +5,10 @@
 		<flight id="1">
 			<airline_id>1</airline_id>
 			<flight_number>FLIGHTNO01</flight_number>
-			<from_city_id>1</from_city_id>
-			<destination_city_id>2</destination_city_id>
+			<from_city_id>4</from_city_id>
+			<destination_city_id>3</destination_city_id>
 			<distance>1500</distance>
-			<time_interval_start>1570692082000</time_interval_start>
-			<time_interval_end>1570710082000</time_interval_end>
+			<duration>60</duration>
 		</flight>
 	</flights>
 
@@ -20,8 +19,7 @@
 			<from_city_id>1</from_city_id>
 			<destination_city_id>2</destination_city_id>
 			<distance>1500</distance>
-			<time_interval_start>1570692082000</time_interval_start>
-			<time_interval_end>1570710082000</time_interval_end>
+			<duration>120</duration>
 		</flight>
 	</flights>
 
@@ -32,8 +30,7 @@
 			<from_city_id>1</from_city_id>
 			<destination_city_id>2</destination_city_id>
 			<distance>1500</distance>
-			<time_interval_start>1570692082000</time_interval_start>
-			<time_interval_end>1570710082000</time_interval_end>
+			<duration>180</duration>
 		</flight>
 	</flights>
 
@@ -44,8 +41,7 @@
 			<from_city_id>1</from_city_id>
 			<destination_city_id>2</destination_city_id>
 			<distance>1500</distance>
-			<time_interval_start>1570692082000</time_interval_start>
-			<time_interval_end>1570710082000</time_interval_end>
+			<duration>300</duration>
 		</flight>
 	</flights>
 

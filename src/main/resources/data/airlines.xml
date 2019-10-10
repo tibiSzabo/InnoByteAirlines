@@ -19,10 +19,4 @@
 		</airline>
 	</airlines>
 
-	<airlines>
-		<airline id="4">
-			<name>Airline Four</name>
-		</airline>
-	</airlines>
-
 </database>

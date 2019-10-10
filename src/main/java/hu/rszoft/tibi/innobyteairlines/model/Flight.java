@@ -25,7 +25,8 @@ public class Flight {
     @JsonProperty("airline_id")
     private String airline;
 
-    private TimeInterval timeInterval;
+    @JsonProperty("duration")
+    private int duration;
 
     @JsonCreator
     public Flight(@JsonProperty("id") String id,
@@ -35,14 +36,15 @@ public class Flight {
                   @JsonProperty("distance") int distance,
                   @JsonProperty("time_interval_start") Long timeIntervalStart,
                   @JsonProperty("time_interval_end") Long timeIntervalEnd,
-                  @JsonProperty("airline_id") String airline) {
+                  @JsonProperty("airline_id") String airline,
+                  @JsonProperty("duration") int duration) {
         this.id = id;
         this.from = from;
         this.destination = destination;
         this.flightNumber = flightNumber;
         this.distance = distance;
-        this.timeInterval = new TimeInterval(timeIntervalStart, timeIntervalEnd);
         this.airline = airline;
+        this.duration = duration;
     }
 
     public String getId() {
@@ -85,20 +87,20 @@ public class Flight {
         this.distance = distance;
     }
 
-    public TimeInterval getTimeInterval() {
-        return timeInterval;
-    }
-
-    public void setTimeInterval(TimeInterval timeInterval) {
-        this.timeInterval = timeInterval;
-    }
-
     public String getAirline() {
         return airline;
     }
 
     public void setAirline(String airline) {
         this.airline = airline;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     @Override
@@ -109,7 +111,7 @@ public class Flight {
                 ", destination=" + destination +
                 ", flightNumber='" + flightNumber + '\'' +
                 ", distance=" + distance +
-                ", timeInterval=" + timeInterval +
+                ", duration=" + duration +
                 '}';
     }
 }
