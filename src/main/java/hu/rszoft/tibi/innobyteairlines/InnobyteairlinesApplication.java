@@ -1,6 +1,9 @@
 package hu.rszoft.tibi.innobyteairlines;
 
+import hu.rszoft.tibi.innobyteairlines.model.City;
 import hu.rszoft.tibi.innobyteairlines.service.AirlineService;
+import hu.rszoft.tibi.innobyteairlines.service.CityService;
+import hu.rszoft.tibi.innobyteairlines.service.FlightService;
 import hu.rszoft.tibi.innobyteairlines.service.XmlParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,16 +16,18 @@ public class InnobyteairlinesApplication {
     public static void main(String[] args) {
         SpringApplication.run(InnobyteairlinesApplication.class, args);
 
-
         XmlParser xmlParser = new XmlParser();
-        System.out.println(xmlParser.readCities());
-        System.out.println(xmlParser.readAirlines());
-        System.out.println(xmlParser.readFlights());
-
-
         AirlineService airlineService = new AirlineService();
-        System.out.println("Flights by airline id: 1");
-        System.out.println(airlineService.getAllFlightsByAirlineId("1"));
+        CityService cityService = new CityService();
+        FlightService flightService = new FlightService();
+
+        City smallestCity = cityService.getSmallestCity();
+        City biggestCity = cityService.getBiggestCity();
+
+        System.out.println("Legkisebb város: " + smallestCity.getName() + ", " + smallestCity.getPopulation());
+        System.out.println("Legnagyobb város: " + biggestCity.getName() + ", " + biggestCity.getPopulation());
+
+        System.out.println(airlineService.getShortestDistanceUsingOneAirline(smallestCity.getId(), biggestCity.getId()));
     }
 
 }

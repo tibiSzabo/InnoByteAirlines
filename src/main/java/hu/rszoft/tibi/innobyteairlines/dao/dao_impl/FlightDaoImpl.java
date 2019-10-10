@@ -27,4 +27,5 @@ public class FlightDaoImpl implements BaseDao<Flight> {
     public List<Flight> getAll() {
         return this.flights.getFlights();
     }
+
 }

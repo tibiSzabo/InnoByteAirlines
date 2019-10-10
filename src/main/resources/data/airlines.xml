@@ -5,15 +5,11 @@
 		<airline id="1">
 			<name>Airline One</name>
 		</airline>
-	</airlines>
 
-	<airlines>
 		<airline id="2">
 			<name>Airline Two</name>
 		</airline>
-	</airlines>
 
-	<airlines>
 		<airline id="3">
 			<name>Airline Three</name>
 		</airline>
