@@ -4,6 +4,7 @@ import hu.rszoft.tibi.innobyteairlines.dao.dao_impl.AirlineDaoImpl;
 import hu.rszoft.tibi.innobyteairlines.dao.dao_impl.CityDaoImpl;
 import hu.rszoft.tibi.innobyteairlines.dao.dao_impl.FlightDaoImpl;
 import hu.rszoft.tibi.innobyteairlines.model.Airline;
+import hu.rszoft.tibi.innobyteairlines.model.City;
 import hu.rszoft.tibi.innobyteairlines.model.Node;
 import hu.rszoft.tibi.innobyteairlines.model.Flight;
 
@@ -33,16 +34,17 @@ public class AirlineService {
 
     public String getShortestDistanceUsingOneAirline(String from, String to) {
         List<Airline> airlines = this.getAllAirlines();
+        City startCity = cityDao.getById(from);
+        City endCity = cityDao.getById(to);
 
         airlines.forEach(airline -> {
 
             List<Flight> flightsByAirline = this.getAllFlightsByAirlineId(airline.getId());
-
             List<Node> unvisited = this.initUnvisitedNodes(flightsByAirline, airline);
             List<Node> visited = new ArrayList<>();
-
             this.setNodeDistanceFromStart(unvisited, from, 0);
-            if (!this.flightsContainStartAndDestination(flightsByAirline, from, to)) {
+
+            if (this.flightsContainStartAndDestination(flightsByAirline, from, to)) {
                 while (unvisited.size() != 0) {
                     Node currentNode = this.getNodeWithShortestDistanceFromStart(unvisited);
                     flightsByAirline.forEach(flight -> {
@@ -55,9 +57,13 @@ public class AirlineService {
                     visited.add(currentNode);
                 }
             } else {
-                System.out.print(airline.getName());
-                System.out.print("Nincs útvonal");
+                System.out.println(airline.getName() + ":");
+                System.out.println("Nincs útvonal");
             }
+            // TODO
+            // Node closest = this.getNodeWithShortestDistanceFromStart(visited);
+            System.out.println(airline.getName() + ":");
+            System.out.println(startCity.getName() + "->" + endCity.getName() + ": "  + "km.");
 
         });
 

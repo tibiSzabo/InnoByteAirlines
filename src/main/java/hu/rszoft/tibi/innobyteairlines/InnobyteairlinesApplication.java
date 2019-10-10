@@ -24,8 +24,10 @@ public class InnobyteairlinesApplication {
         City smallestCity = cityService.getSmallestCity();
         City biggestCity = cityService.getBiggestCity();
 
+        System.out.println("\n");
         System.out.println("Legkisebb város: " + smallestCity.getName() + ", " + smallestCity.getPopulation());
         System.out.println("Legnagyobb város: " + biggestCity.getName() + ", " + biggestCity.getPopulation());
+        System.out.println("\n");
 
         System.out.println(airlineService.getShortestDistanceUsingOneAirline(smallestCity.getId(), biggestCity.getId()));
     }
