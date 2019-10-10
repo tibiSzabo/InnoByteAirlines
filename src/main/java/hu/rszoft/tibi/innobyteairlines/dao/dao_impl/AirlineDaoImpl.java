@@ -2,20 +2,24 @@ package hu.rszoft.tibi.innobyteairlines.dao.dao_impl;
 
 import hu.rszoft.tibi.innobyteairlines.dao.BaseDao;
 import hu.rszoft.tibi.innobyteairlines.model.Airline;
+import hu.rszoft.tibi.innobyteairlines.model.Airlines;
+import hu.rszoft.tibi.innobyteairlines.service.XmlParser;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AirlineDaoImpl implements BaseDao<Airline> {
-    private List<Airline> airlines;
+    private Airlines airlines;
 
     public AirlineDaoImpl() {
-
+        XmlParser xmlParser = new XmlParser();
+        this.airlines = xmlParser.readAirlines();
     }
 
     @Override
-    public Airline getById(int id) {
-        return this.airlines.stream()
+    public Airline getById(String id) {
+        return this.airlines.getAirlines().stream()
                 .filter(airline -> airline.getId().equals(id))
                 .findAny()
                 .orElse(null);
@@ -23,6 +27,6 @@ public class AirlineDaoImpl implements BaseDao<Airline> {
 
     @Override
     public List<Airline> getAll() {
-        return new ArrayList<>(this.airlines);
+        return this.airlines.getAirlines();
     }
 }
