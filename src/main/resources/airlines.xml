@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<database>
+
+	<airlines>
+		<airline id="1">
+			<name>Airline One</name>
+		</airline>
+	</airlines>
+
+</database>

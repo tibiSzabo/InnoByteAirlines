@@ -11,7 +11,7 @@ public class CityDaoImpl implements BaseDao<City> {
 
     @Override
     public City getById(int id) {
-        return cities.stream()
+        return this.cities.stream()
                 .filter(city -> city.getId().equals(id))
                 .findAny()
                 .orElse(null);
@@ -19,6 +19,6 @@ public class CityDaoImpl implements BaseDao<City> {
 
     @Override
     public List<City> getAll() {
-        return new ArrayList<>(cities);
+        return new ArrayList<>(this.cities);
     }
 }

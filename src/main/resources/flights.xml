@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<database>
+
+	<flights>
+		<flight id="1">
+			<from_city_id>1</from_city_id>
+			<destination_city_id>2</destination_city_id>
+			<flight_number>FLIGHTNO01</flight_number>
+			<distance>1500</distance>
+			<time_interval_start>1570691783</time_interval_start>
+			<time_interval_end>1570716983</time_interval_end>
+		</flight>
+	</flights>
+
+</database>

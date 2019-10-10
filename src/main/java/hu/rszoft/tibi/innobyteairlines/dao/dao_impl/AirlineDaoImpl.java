@@ -11,7 +11,7 @@ public class AirlineDaoImpl implements BaseDao<Airline> {
 
     @Override
     public Airline getById(int id) {
-        return airlines.stream()
+        return this.airlines.stream()
                 .filter(airline -> airline.getId().equals(id))
                 .findAny()
                 .orElse(null);
@@ -19,6 +19,6 @@ public class AirlineDaoImpl implements BaseDao<Airline> {
 
     @Override
     public List<Airline> getAll() {
-        return new ArrayList<>(airlines);
+        return new ArrayList<>(this.airlines);
     }
 }
