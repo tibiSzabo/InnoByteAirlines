@@ -3,6 +3,7 @@ package hu.rszoft.tibi.innobyteairlines.dao.dao_impl;
 import hu.rszoft.tibi.innobyteairlines.dao.BaseDao;
 import hu.rszoft.tibi.innobyteairlines.model.Airline;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AirlineDaoImpl implements BaseDao<Airline> {
@@ -10,11 +11,14 @@ public class AirlineDaoImpl implements BaseDao<Airline> {
 
     @Override
     public Airline getById(int id) {
-        return null;
+        return airlines.stream()
+                .filter(airline -> airline.getId().equals(id))
+                .findAny()
+                .orElse(null);
     }
 
     @Override
     public List<Airline> getAll() {
-        return null;
+        return new ArrayList<>(airlines);
     }
 }
