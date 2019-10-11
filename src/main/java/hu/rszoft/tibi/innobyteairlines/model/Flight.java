@@ -34,8 +34,6 @@ public class Flight {
                   @JsonProperty("destination_city_id") String destination,
                   @JsonProperty("flight_number") String flightNumber,
                   @JsonProperty("distance") int distance,
-                  @JsonProperty("time_interval_start") Long timeIntervalStart,
-                  @JsonProperty("time_interval_end") Long timeIntervalEnd,
                   @JsonProperty("airline_id") String airline,
                   @JsonProperty("duration") int duration) {
         this.id = id;

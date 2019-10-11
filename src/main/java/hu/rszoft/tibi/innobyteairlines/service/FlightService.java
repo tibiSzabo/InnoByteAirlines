@@ -10,9 +10,7 @@ import java.util.stream.Collectors;
 
 public class FlightService {
 
-    private AirlineDaoImpl airlineDao = new AirlineDaoImpl();
     private FlightDaoImpl flightDao = new FlightDaoImpl();
-    private CityDaoImpl cityDao = new CityDaoImpl();
 
     public List<Flight> getAllFlights() {
         return this.flightDao.getAll();
